@@ -1,0 +1,161 @@
+body {
+    font-family: 'Comic Sans MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fbeaff 0%, #e0f7fa 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #7c3aed;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    font-size: 2.5em;
+    text-shadow: 1px 2px 8px #e0e7ff;
+}
+
+form.guestbook-form {
+    background: #fff7fb;
+    max-width: 420px;
+    margin: 30px auto 25px auto;
+    padding: 28px 60px 22px 32px;
+    border-radius: 25px;
+    box-shadow: 0 4px 24px rgba(124,58,237,0.09);
+    border: 2px dashed #a5b4fc;
+    position: relative;
+}
+
+label {
+    font-weight: bold;
+    color: #7c3aed;
+    font-size: 1.1em;
+}
+
+input[type="text"], textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px 14px;
+    margin-top: 7px;
+    margin-bottom: 18px;
+    border: 2px solid #a5b4fc;
+    border-radius: 12px;
+    font-size: 1em;
+    background: #f3f8ff;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px #f3e8ff;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border: 2px solid #f472b6;
+    outline: none;
+    box-shadow: 0 0 0 2px #fbeaff;
+}
+
+input[type="submit"] {
+    background: linear-gradient(90deg, #a5b4fc, #f472b6);
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px #e0e7ff;
+    transition: background 0.2s, transform 0.1s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(90deg, #f472b6, #a5b4fc);
+    transform: scale(1.05);
+}
+
+.zprava {
+    text-align: center;
+    font-weight: bold;
+    color: #f472b6;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.vzkazy-nadpis {
+    text-align: center;
+    margin-top: 40px;
+    color: #7c3aed;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+.guestbook-messages {
+    max-width: 540px;
+    margin: 0 auto 40px auto;
+}
+
+.guestbook-message {
+    background: linear-gradient(120deg, #fbeaff 70%, #e0f7fa 100%);
+    border-radius: 22px;
+    margin-bottom: 22px;
+    padding: 18px 24px 14px 24px;
+    box-shadow: 0 3px 16px rgba(124,58,237,0.08);
+    border-left: 7px solid #f472b6;
+    position: relative;
+    animation: pop-in 0.7s cubic-bezier(.25,1.7,.6,.98);
+}
+
+@keyframes pop-in {
+    0% { opacity: 0; transform: scale(0.9) translateY(30px);}
+    100% { opacity: 1; transform: scale(1) translateY(0);}
+}
+
+.guestbook-message strong {
+    color: #f472b6;
+    font-size: 1.13em;
+    letter-spacing: 0.5px;
+}
+
+.guestbook-message small {
+    color: #7c3aed;
+    font-size: 0.97em;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+.guestbook-message p {
+    margin: 13px 0 0 0;
+    color: #333;
+    line-height: 1.7;
+    word-break: break-word;
+    font-size: 1.08em;
+}
+
+.zadne-vzkazy {
+    text-align: center;
+    color: #bbb;
+    margin-top: 30px;
+    font-size: 1.1em;
+}
+
+.like-btn {
+    background: linear-gradient(90deg, #a5b4fc, #f472b6);
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    padding: 6px 18px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.2s;
+}
+.like-btn:hover {
+    background: linear-gradient(90deg, #f472b6, #a5b4fc);
+    transform: scale(1.05);
+}
+.like-count {
+    margin-left: 16px;
+    font-size: 1.1em;
+    color: #f472b6;
+    font-weight: bold;
+}
