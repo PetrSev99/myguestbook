@@ -9,7 +9,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (!empty($jmeno) && !empty($vzkaz)) {
         $sql = "INSERT INTO vzkazy (Jmeno, Vzkaz, Datum) VALUES ('$jmeno', '$vzkaz', NOW())";
         if (mysqli_query($conn, $sql)) {
-            $zprava = "Vzkaz byl úspěšně uložen.";
+            // Přesměrování na stejnou stránku po úspěšném uložení vzkazu kvuli prevenci opětovného odeslání formuláře
+            header("Location: " . $_SERVER['REQUEST_URI']);
+            exit;
         } else {
             $zprava = "Chyba: " . mysqli_error($conn);
         }
